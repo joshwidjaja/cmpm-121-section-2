@@ -16,11 +16,6 @@ let gameOver = true;
 
 document.addEventListener('mousedown', () => jump());
 
-
-setInterval(() => {
-    main()
-}, 10);
-
 function main()
 {
     if(gameOver == false)
@@ -30,8 +25,10 @@ function main()
 
         checkGameOver();
     }
+    window.requestAnimationFrame(main);
 }
 
+window.requestAnimationFrame(main);
 
 function jump()
 {
