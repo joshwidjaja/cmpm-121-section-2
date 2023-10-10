@@ -18,7 +18,7 @@ document.addEventListener('mousedown', () => jump());
 
 function main()
 {
-    if(gameOver == false)
+    if(!gameOver)
     {
         score++;
         setText("Score: " + score);
@@ -32,7 +32,7 @@ window.requestAnimationFrame(main);
 
 function jump()
 {
-    if(gameOver === false)
+    if(!gameOver)
     {
         if(isJumping == false)
         {
